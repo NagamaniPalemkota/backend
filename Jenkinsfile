@@ -42,7 +42,7 @@ pipeline{
         post{
             always{
                 echo "Running always"
-                //deleteDir()
+                deleteDir()
             }
         }
     }
