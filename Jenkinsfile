@@ -7,6 +7,9 @@ pipeline{
         disableConcurrentBuilds()
         ansiColor('xterm')
     }
+    environment{
+        def appVersion = ''
+    }
     stages{
         stage('read the version'){
             steps{
