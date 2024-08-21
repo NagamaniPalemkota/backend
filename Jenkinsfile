@@ -39,18 +39,18 @@ pipeline{
                 """
             }
         }
-         stage('sonar scaanning'){
-            environment{
-                scannerHome = tool 'sonar' //referring sonar scanner
-            }
-            steps{
-                script{
-                    withSonarQubeEnv('sonar'){ //referring sonarqube server
-                        sh " ${scannerHome}/bin/sonar-scanner"
-                    }
-                }
-            }
-        }
+        //  stage('sonar scaanning'){
+        //     environment{
+        //         scannerHome = tool 'sonar' //referring sonar scanner
+        //     }
+        //     steps{
+        //         script{
+        //             withSonarQubeEnv('sonar'){ //referring sonarqube server
+        //                 sh " ${scannerHome}/bin/sonar-scanner"
+        //             }
+        //         }
+        //     }
+        // }
         stage('uploading artifact'){
             steps{
                script{
